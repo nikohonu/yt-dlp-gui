@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "yt-dlp-gui"
+version = "0.1.0"
+description = "simple qt gui for yt-dlp"
+authors = ["Niko Honu <nikohonu@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "yt_dlp_gui"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+pyside6 = "^6.5.2"
+appdirs = "^1.4.4"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+yt-dlp-gui = 'yt_dlp_gui.__main__:main'
+
+[tool.isort]
+profile = "black"
